@@ -1,0 +1,64 @@
+---
+layout: post
+title: IFT6758 Demo Post
+---
+
+This post outlines a few more things you may need to know for creating and configuring your blog posts.
+If you are interested in more general template features or syntax, you can visit the [Introducing Lanyon]({% post_url 2020-04-03-introducing-lanyon %}) or the [Example Content]({% post_url 2020-04-02-example-content %}) posts.
+
+## Configurations
+
+You should modify some of the default values in `_config.yml`, found in the root directory of this repo.
+Things like the title, tagline, description, author information, etc. are all fair game to modify.
+Be more careful when modifying the url information - things can break if done incorrectly (these are used if you are deploying via Github pages)
+
+## Creating Posts
+
+To create a new post in the blog, add a new Markdown file to the `_posts/` directory, with the name following the format `YYYY-MM-DD-postname.md`.
+Begin the post with the following code:
+
+```markdown
+---
+layout: post
+title: [POST TITLE]
+---
+```
+
+From there, write your content as you would a normal Markdown file.
+In general, I would recommend writing one sentence per line. 
+This is not required, but this is far easier to work with than having a single giant line of multiple sentences for a single paragraph.
+
+## Interactive plots
+
+Here's how you could embed interactive figures that have been exported as HTML files.
+Note that we will be using plotly for this demo, but anything that allows you to HTML should work.
+All that's required is for you to export your figure into HTML format, and make sure that the file exists in the `_includes` directory in this repository's root directory.
+To embed it into any page, simply insert the following code anywhere into your page.
+
+```markdown
+{% raw %}{% include [FIGURE_NAME].html %}{% endraw %} 
+```
+
+For example, the following code can be used to generate the figure underneath it.
+
+```python
+import pandas as pd
+import plotly.express as px
+
+df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/earthquakes-23k.csv')
+
+fig = px.density_mapbox(df, lat='Latitude', lon='Longitude', z='Magnitude', radius=10,
+                        center=dict(lat=0, lon=180), zoom=0,
+                        mapbox_style="stamen-terrain")
+fig.show()
+
+fig.write_html('./_includes/plotly_demo_1.html')
+```
+
+{% include plotly_demo_1.html %}
+
+
+The above figure is pretty cool, but you can also embed heavier/more complex figures.
+For brevity, the following figure is generated from the included `plotly_html.ipynb` notebook file in the repo's root directory.
+
+{% include plotly_demo_2.html %}
