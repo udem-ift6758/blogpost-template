@@ -15,3 +15,5 @@ author:
 
 # Gems
 theme: jekyll-theme-minimal
+plugins:
+  - jekyll-paginate
