@@ -1,7 +1,7 @@
 # Setup
-title:               IFT6758 Blog
-tagline:             'A template based on the Lanyon Jekyll theme'
-description:         'fhdfhdhkjfhdgjkhdfkjdhgkfdgfdjkgdhgkjfhdgdgjk'
+title:               Titre
+tagline:             'tagline'
+description:         'description'
 url:                 https://julien-hebert-doutreloux.github.io/Project-Blog-IFT6758-A23/
 baseurl:             ''
 paginate:            5
