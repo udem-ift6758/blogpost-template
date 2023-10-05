@@ -8,7 +8,8 @@ title: Milestone 1
 La LNH rend disponible de nombreuses données par le biais d'une API publique dont le end-point est le suivant : https://statsapi.web.nhl.com/api/v1/game/[GAME_ID]/feed/live/. Chaque requête envoyé à ce end-point renvoie un fichier json contenant des renseignements sur la partie en question.
 
 Les parties ont un identifiant (GAME_ID) qui suit une structure comme suit: 2017020008
-<ol>
+
+<ul>
   <li>Les 4 premiers chiffres désignent la saison (2017 dans le cas de notre exemple)</li>
   <li>Les deux chiffres suivants font référence au type de partie (01 = présaison, 02 = saison régulière, 03 = séries éliminatoires, 04 = match des étoiles)</li>
   <li>Les 4 derniers chiffres désignent le numéro de la partie (0008 dans le cas de notre exemple)</li>
@@ -191,5 +192,8 @@ plt.show()
 ```
 {% include outil_deboguage_screenshot.jpg %}
 ## 3. Nettoyer les données
+
+Les données qui nous sont envoyées par l'API de la LNH sont vastes. Pour un projet de sciences des données comme le nôtre, il faut premièrement décider de quelles données nous jugeons utiles. Par ailleurs, il nous faut aussi choisir une structure pour nos données. Dans notre cas, nous avons extrait les données pertinentes de chaque JSON et nous avons sauvegardés ces derniers sous la forme d'un fichier CSV. Par ailleurs, nous avons créer une classe GAME qui nous permet de convertir n'importe quel JSON brute en un dataframe pandas contenant les données utiles.
+
 ## 4. Visualisations simples
 ## 5. Visualisations avancées
