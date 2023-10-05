@@ -190,7 +190,8 @@ plt.title('Josh Morrissey Wrist Shot saved by Frederik Andersen')
 
 plt.show()
 ```
-{% include outil_deboguage_screenshot.jpg %}
+![alt text](https://github.com/julien-hebert-doutreloux/Project-Blog-IFT6758-A23/blob/main/public/outil_deboguage_screenshot.jpg)
+
 ## 3. Nettoyer les données
 
 Les données qui nous sont envoyées par l'API de la LNH sont vastes. Pour un projet de sciences des données comme le nôtre, il faut premièrement décider de quelles données nous jugeons utiles. Par ailleurs, il nous faut aussi choisir une structure pour nos données. Dans notre cas, nous avons extrait les données pertinentes de chaque JSON et nous avons sauvegardés ces derniers sous la forme d'un fichier CSV. Par ailleurs, nous avons créer une classe GAME qui nous permet de convertir n'importe quel JSON brute en un dataframe pandas contenant les données utiles.
