@@ -201,7 +201,20 @@ Les données qui nous sont envoyées par l'API de la LNH sont vastes. Pour un pr
 Voici une ligne de notre dataframe à titre d'exemple:
 ![alt text](https://raw.githubusercontent.com/julien-hebert-doutreloux/Project-Blog-IFT6758-A23/main/public/df_exemple.jpg)
 
-Nous pouvons remarquer que le champ de « force » (égal, avantage numérique ou en désavantage numérique) n'est indiqué que pour les buts et non pas pour les tirs. De plus, il ne précise pas le nombre de joueurs sur la glace (5 contre 4, ou 5 contre 3, etc.). Une façon simple d'inclure cette information serait de regarder les pénalités données pour chaque partie. Par exemple, si les Canadiens de Montréal recoivent une pénalité de 2 minute à la 7e minute de jeu de la 1ère période, puis une autre pénalité de 2 minutes à la 8e minute de jeu de la 1ère période, alors nous savons qu'entre la 8e minute et la 9e minute de jeu de la 1ère période les Canadiens sont en désavantage numérique à 5 contre 3. 
+Nous pouvons remarquer que le champ de « force » (égal, avantage numérique ou en désavantage numérique) n'est indiqué que pour les buts et non pas pour les tirs. De plus, il ne précise pas le nombre de joueurs sur la glace (5 contre 4, ou 5 contre 3, etc.). Une façon simple d'inclure cette information serait de regarder les pénalités données pour chaque partie. Par exemple, si les Canadiens de Montréal recoivent une pénalité de 2 minute à la 7e minute de jeu de la 1ère période, puis une autre pénalité de 2 minutes à la 8e minute de jeu de la 1ère période, alors nous savons qu'entre la 8e minute et la 9e minute de jeu de la 1ère période les Canadiens sont en désavantage numérique à 5 contre 3.
+
+Par ailleurs, voici trois caractéristiques supplémentaires que nous proposons de créer à partir des données disponibles:
+<ol>
+  <li>
+Nous avons téléchargé les saisons 2017 à 2021. Pour chaque partie, nous avons les statistiques des joueurs participants. Une donnée intéressant serait de compiler les statistiques individuelles pour chaque joueur sur l'ensemble des saisons 2017 à 2021 afin de créer un score global pour chaque joueur. Ce score serait particulièrement utile pour faire des prédictions avec nos données ou tout simplement pour rendre nos données plus intéressantes. Par exemple, si un excellent joueur prend une pénalité, l'événement est beaucoup plus grave que si le même événement arrive à un joueur de dernier ordre. Par ailleurs, nous pourrions connaitre la force des gardiens de buts de chaque équipe. Nous pourrions aussi évaluer la force d'une équipe à partir de la force de ses joueurs.
+  </li>
+  <li>
+Nous pourrions reprendre la logique évoquée au point précédent, mais cette fois-ci en l'appliquant aux équipes. Nous pourrions évaluer la tendance de plusieurs variables sur n nombres de parties précédentes. Cette tendance pourrait inclure le nombre de buts marqués par partie, le ratio victoires/défaites, etc. Nous pourrions donc entre autres savoir si une équipe est lancée dans une série fulgurantes de victoires ou si elle traverse un désert marqué de défaites. Nous pourrions aussi savoir si une équipe en particulier prend beaucoup de pénalités. Nous pourrions également recréer le classement des équipes selon leurs nombres de victoires et de défaites.
+  </li>
+  <li>
+Nous pourrions reprendre la logique évoquée aux deux points précédents, mais cette fois-ci en l'appliquant à l'ensemble de la LNH. Par exemple, aucune équipe canadienne n'a gagné la coupe Stanley depuis 1993. Connaître ce genre de tendance globale éclaire notre compréhension des dynamiques au sein de la LNH. Nous pourrions aussi évaluer les ratios de victoire/défaite entre les différentes conférences et les différentes divisions. Nous pourrions évaluer les chances d'une équipe de gagner la coupe Stanley selon sa position dans le classement. 
+  </li>
+</ol>
 
 ## 4. Visualisations simples
 ## 5. Visualisations avancées
