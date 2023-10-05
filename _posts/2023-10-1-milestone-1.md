@@ -177,6 +177,7 @@ plt.title('Josh Morrissey Wrist Shot saved by Frederik Andersen')
 
 plt.show()
 ```
+{% include outil_deboguage_screenshot.jpgl %}
 ## 3. Nettoyer les données
 ## 4. Visualisations simples
 ## 5. Visualisations avancées
