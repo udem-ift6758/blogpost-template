@@ -30,7 +30,8 @@ import numpy as np
 import csv
 import ast
 import warnings
-warnings.filterwarnings("ignore", category=DeprecationWarning) 
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 dir_path = os.path.join('.','..','data\processed\csv')
 files = os.listdir(dir_path)
 
@@ -117,12 +118,13 @@ def update_graph(game_list):
 
 # Widgets
 
+info_text = widgets.HTML()
+
 A = Dropdown(options=["Regular Season", "Playoffs"], value='Regular Season', description='Game Type')
 A.observe(display_game)
 
 B = Dropdown(options=["2017", "2018", "2019", "2020", "2021"], value="2017", description='Season')
 B.observe(display_game)
-
 
 C = Dropdown(options=[], description='Game ID')
 C.observe(update_int_slider, names='value')
@@ -130,11 +132,7 @@ C.observe(update_int_slider, names='value')
 # max initialisé à 1, mais mis à jour la ligne suivante
 D = IntSlider(value=0, min=0, max=1, step=1, description='Event ID')
 # Pour avoir les valeurs de la partie affichée (exemple: 67 events)
-
 initial_game_list = display_game(0)
-
-# display_game(initial_game_list)
-
 D.observe(update_graph, names='value')
 
 A.default_value = 'Regular Season'
@@ -154,8 +152,8 @@ default_value_button.on_click(set_default)
 
 display(A,B,C,D, default_value_button)
 
-# info
-info_text = widgets.HTML()
+# infos sur les parties (table html)
+
 display(info_text)
 
 info_text.value="""
@@ -177,7 +175,8 @@ info_text.value="""
   </tr>
 </table>
 """
-# image
+
+# image (graphique matplotlib)
 
 plt.rcParams["figure.figsize"] = [7.00, 3.50]
 plt.rcParams["figure.autolayout"] = True
