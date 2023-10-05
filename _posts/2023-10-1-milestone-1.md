@@ -18,6 +18,9 @@ Les parties ont un identifiant (GAME_ID) qui suit une structure comme suit: 2017
 Avec ces renseignements en main, il nous est donc possible d'effectuer une série de requêtes au serveur de la LNH afin de télécharger les données d'une saison en particulier. Par exemple, si nous désirons télécharger les données pour la saison régulière de 2017, il suffit d'aller chercher la partie 2017020001 (2017 pour l'année, 02 pour spécifier que nous voulons les parties de la saison régulière et 0001 pour spécifier le numéro de la première partie de la saison). Ensuite, nous pouvons envoyer une requête pour la partie 2017020002, puis 2017020003, 2017020004, etc.
 
 ## 2. Outil de débogage interactif
+
+Nous avons créé un outil de débogage interactif. Son principe est assez simple. L'utilisateur peut sélectionner les parties de la saison régulière ou les parties des séries élimiatoires. Ensuite, il peut choisir la saison de son choix (2017, 2018, 2019, 2020 ou 2021). Ces deux options permettent d'ajuster le contenu d'un menu déroulant contenant les parties (menu déroulant GAME_ID). Par exemple, en choisissant "Playoffs" et "2018", le menu déroulant GAME_ID ne contiendra que les parties des séries éliminatoires de 2018. Ensuite, il nous suffit de choisir une partie qui nous intéresse. Un <i>int slider</i> (EVENT ID) nous permet de parcourir tous les événements de la partie sélectionnée. Un petit tableau HTML nous indique les équipes et le score pour chaque partie. Par ailleurs, un tableau interactif dessiné avec la librairie matplotlib nous permet de visualiser la location sur la patinoire et la description de chaque événement.
+
 ```python
 %matplotlib notebook
 from ipywidgets import *
