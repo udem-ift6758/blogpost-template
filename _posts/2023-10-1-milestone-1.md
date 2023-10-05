@@ -193,7 +193,7 @@ plt.title('Josh Morrissey Wrist Shot saved by Frederik Andersen')
 
 plt.show()
 ```
-![alt text](https://github.com/julien-hebert-doutreloux/Project-Blog-IFT6758-A23/blob/main/public/outil_deboguage_screenshot.jpg)
+![alt text](https://raw.githubusercontent.com/julien-hebert-doutreloux/Project-Blog-IFT6758-A23/main/public/outil_deboguage_screenshot.jpg)
 
 ## 3. Nettoyer les données
 
