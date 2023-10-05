@@ -4,6 +4,18 @@ title: Milestone 1
 ---
 
 ## 1. Acquisition de données
+
+La LNH rend disponible de nombreuses données par le biais d'une API publique dont le end-point est le suivant : https://statsapi.web.nhl.com/api/v1/game/[GAME_ID]/feed/live/. Chaque requête envoyé à ce end-point renvoie un fichier json contenant des renseignements sur la partie en question.
+
+Les parties ont un identifiant (GAME_ID) qui suit une structure comme suit: 2017020008
+<ol>
+  <li>Les 4 premiers chiffres désignent la saison (2017 dans le cas de notre exemple)</li>
+  <li>Les deux chiffres suivants font référence au type de partie (01 = présaison, 02 = saison régulière, 03 = séries éliminatoires, 04 = match des étoiles)</li>
+  <li>Les 4 derniers chiffres désignent le numéro de la partie (0008 dans le cas de notre exemple)</li>
+</ol>
+
+Avec ces renseignements en main, il nous est donc possible d'effectuer une série de requêtes au serveur de la LNH afin de télécharger les données d'une saison en particulier. Par exemple, si nous désirons télécharger les données pour la saison régulière de 2017, il suffit d'aller chercher la partie 2017020001 (2017 pour l'année, 02 pour spécifier que nous voulons les parties de la saison régulière et 0001 pour spécifier le numéro de la première partie de la saison). Ensuite, nous pouvons envoyer une requête pour la partie 2017020002, puis 2017020003, 2017020004, etc.
+
 ## 2. Outil de débogage interactif
 ```python
 %matplotlib notebook
