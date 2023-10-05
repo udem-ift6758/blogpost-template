@@ -198,5 +198,10 @@ plt.show()
 
 Les données qui nous sont envoyées par l'API de la LNH sont vastes. Pour un projet de sciences des données comme le nôtre, il faut premièrement décider de quelles données nous jugeons utiles. Par ailleurs, il nous faut aussi choisir une structure pour nos données. Dans notre cas, nous avons extrait les données pertinentes de chaque JSON et nous avons sauvegardés ces derniers sous la forme d'un fichier CSV. Par ailleurs, nous avons créer une classe GAME qui nous permet de convertir n'importe quel JSON brute en un dataframe pandas contenant les données utiles.
 
+Voici une ligne de notre dataframe à titre d'exemple:
+![alt text](https://raw.githubusercontent.com/julien-hebert-doutreloux/Project-Blog-IFT6758-A23/main/public/df_exemple.jpg)
+
+Nous pouvons remarquer que le champ de « force » (égal, avantage numérique ou en désavantage numérique) n'est indiqué que pour les buts et non pas pour les tirs. De plus, il ne précise pas le nombre de joueurs sur la glace (5 contre 4, ou 5 contre 3, etc.). Une façon simple d'inclure cette information serait de regarder les pénalités données pour chaque partie. Par exemple, si les Canadiens de Montréal recoivent une pénalité de 2 minute à la 7e minute de jeu de la 1ère période, puis une autre pénalité de 2 minutes à la 8e minute de jeu de la 1ère période, alors nous savons qu'entre la 8e minute et la 9e minute de jeu de la 1ère période les Canadiens sont en désavantage numérique à 5 contre 3. 
+
 ## 4. Visualisations simples
 ## 5. Visualisations avancées
