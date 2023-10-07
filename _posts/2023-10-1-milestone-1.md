@@ -217,4 +217,6 @@ Nous pourrions reprendre la logique évoquée aux deux points précédents, mais
 </ol>
 
 ## 4. Visualisations simples
+Test de graphique interactif exporté avec plotly.
+{% raw %}{% include test.html %}{% endraw %} 
 ## 5. Visualisations avancées
