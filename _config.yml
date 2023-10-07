@@ -1,6 +1,6 @@
 # Setup
-title:               'Data Science blog for the IFT-16758 class'
-tagline:             'tagline'
+title:               'Projet de sciences des données pour le cours IFT-6758 (Université de Montréal)'
+tagline:             'Automne 2023'
 description:         'Blog description'
 url:                 https://julien-hebert-doutreloux.github.io/Project-Blog-IFT6758-A23/
 baseurl:             ''
