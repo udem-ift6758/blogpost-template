@@ -3,9 +3,38 @@ layout: post
 title: Milestone 1
 ---
 
-## Question 1
+## Acquisition de données 
 
-...content...
+Afin de télécharger les données de match NHL, nous avons suivi les étapes comme décrites ci-dessous :
+
+Pour commencer, il faut installer les bibliothèques requises en exécutant 
+
+  ```bash
+    pip install -r requirement
+  ``` 
+
+La classe NHLDataDownloader dans le fichier load.py permet de télécharger les données d'une année donnée. Pour ce faire, on fait une instanciation de cette classe et on la donne comme paramétre l'année cible.
+
+Il faut donc faire l'importation du fichier contenant cette classe.
+```bash
+    from src.data.load import NHLDataDownloader
+  ``` 
+Utiliser la fonction load_data() de cette classe pour télécharger les données. Ci dessous un exemple de code pour télécharger les données de la saison 2018.
+
+    ```python 
+
+      # Instancier un objet de la classe NHLDataDownloader en spécifiant l'année cible 
+      season_year = 2017
+      nhl_downloader = NHLDataDownloader(season_year)
+      # télécharger les données
+      season_data = nhl_downloader.load_data()
+
+    ```
+
+Si les données sont déjà présentées dans un fichier, elles sont chargées. Sinon, elles sont téléchargées et enregistrées dans un fichier.
+
+Une fois le téléchargement terminé, les données seront enregistrées dans un fichier au format season_fullname.pkl, où season_fullname est le nom complet de la saison (par exemple, 20172018.pkl). Vous pouvez maintenant utiliser ces données selon vos besoins
+
 
 ## Outil de débogage interactif 
 
@@ -116,3 +145,32 @@ De plus, l'utilisation d'une échelle logarithmique pour l'axe des ordonnées pe
 ![Shots types](/assets/images/2018.png)
 
 ### Question 2
+Il n’y a pas eu de changements remarquables au cours des trois dernières saisons. En effet, pour les trois saisons, le tir le plus dangereux et le plus courant, c’est “Wrist Shot”. L’ordre des autres trois restent constants au cours de trois ans (dans l’ordre décroissant de dangerosité: Slap Shot, Snap Shot, Backhand, Tip-In, Deflected, Wrap-around).
+### Question 3 
+
+## Visualisations avancées
+
+### Question 1 
+Ces figures illustrent les 4 graphiques au zone offensive de la saison 2016/2017 jusqu'à la saison 2020/2021
+{% include 20162017.html %}
+
+{% include 20172018.html %}
+
+{% include 20182019.html %}
+
+{% include 20192020.html %}
+
+{% include 20202021.html %}
+
+
+
+
+
+
+
+### Question 2 
+
+
+### Question 3
+
+### Question 4 
