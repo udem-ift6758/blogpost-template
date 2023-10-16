@@ -78,14 +78,14 @@ Display the widgets
 widgets.VBox([match_dropdown, interactive_output])
 ```
 Cette figure représente des événements au cours d'un match de hockey. Les données sont affichées sous forme de nuage de points animé, où chaque point correspond à un événement particulier d'un match choisi. Les événements sont disposés en fonction de leurs coordonnées x et y, et l'animation permet de suivre l'évolution de ces événements au fil du temps en se basant sur l'indice de l'événement.
-<img src="interactive.png" />
+![Interactive hockey match](/assets/images/interactive.png)
 Cette figure illustre le suivi des événements pour un match donné de manière interactive. 
 {% include plotly_demo_3.html %}
 
 ## Nettoyer les données 
 ### Question 1
 L'illustration ci-dessous présente un extrait du dataframe final, offrant ainsi un aperçu des données que nous avons obtenues.
-<img src="df.png" />
+![Dataframe](/assets/images/df.png)
 
 ### Question 2 
 
@@ -113,6 +113,6 @@ Le Tip-In est le type de tir le plus dangereux en termes de conversion en buts p
 Le choix du graphique à barres est expliqué pour plusieurs raisons. Il permet une comparaison directe des types de tirs en superposant les barres de buts sur celles des tirs, mettant ainsi en lumière la proportion de buts par rapport aux tirs. Cette visualisation claire facilite l'identification des tendances et la mise en évidence des types de tirs les plus courants et les plus dangereux.
 De plus, l'utilisation d'une échelle logarithmique pour l'axe des ordonnées permet de visualiser efficacement des valeurs très différentes entre les types de tirs. En résumé, le graphique à barres empilées offre une perspective claire et concise pour analyser les données sur les tirs et les buts.
 
-<img src="2018.png" />
+![Shots types](/assets/images/2018.png)
 
 ### Question 2
